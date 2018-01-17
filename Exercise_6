@@ -1,0 +1,20 @@
+1. A stack diagram just before the last invocation of prod completes:
+prod: m = 1, n = 4
+prod: m = 1, n = 3
+prod: m = 1, n = 2
+prod: m = 1, n = 1
+
+2. I think the output is 24.
+
+3. I think it basically takes a starting number and an ending number, multiplying all the numbers in between together.
+
+4. The rewritten program would look like:
+
+public static int prod(int m, int n) {
+    if (m == n) {
+        return n;
+    } else {
+    
+        return n * prod(m, n - 1);
+    }
+}
